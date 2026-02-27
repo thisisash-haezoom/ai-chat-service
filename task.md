@@ -1,0 +1,32 @@
+# Tasks
+
+- [x] AI-Chat-Service 프로젝트 기획 및 PRD 작성
+    - [x] PRD 작성 (VS Code-like UI/UX, Dynamic Agent Management 등)
+    - [x] 대표님 컨펌 완료
+- [x] 기술적 설계 및 환경 설정
+    - [x] 신규 디렉토리 `ai-chat-service` 생성
+    - [x] Next.js + Tailwind + shadcn/ui 기반 프로젝트 초기화
+- [x] UI/UX 개발 (VS Code 스타일 집중)
+    - [x] VS Code 레이아웃 (Activity Bar, Sidebar, Editor Area) 구현
+    - [x] Dynamic Agent 관리 (Add/Edit/Delete) UI 구현
+    - [x] AI Agent 작업 리포팅 (Terminal/Output 스타일) 구현
+- [x] 최종 검수 및 Walkthrough 작성
+- [x] '개발스러운' UI 고도화
+    - [x] 메시지에 라인 넘버 및 코드 펜스 디자인 적용
+    - [x] 터미널 스타일의 에이전트 로그 시스템 강화
+    - [x] 구문 강조(Syntax Highlighting) 및 코드 스니펫 UI 개선
+- [x] 서비스 확장성 및 추가 페이지 기획
+    - [x] 필요 페이지 분석 및 보고
+    - [x] 에이전트 관리 페이지 (`/agents`) 개발
+        - [x] 에이전트 리스트 및 검색 UI (VS Code Extensions style) 구현
+        - [x] 에이전트 상세 정보 및 설정 사이드바 구현
+        - [x] 에이전트 추가/삭제 기능 시뮬레이션
+- [ ] Phase 4: Backend & Infrastructure Planning [/]
+    - [x] 기술 스펙 문서 (`TODO.md`) 작성
+    - [ ] 데이터베이스 스키마 상세 정의
+    - [ ] API 라우트 설계 및 문서화
+- [x] Phase 3: Auth & Account Management
+    - [x] 로그인 페이지 (`/login`) - VS Code Theme 구현
+    - [x] 마이페이지/설정 페이지 (`/settings`) 구현
+    - [x] 하단 프로필 섹션 및 네비게이션 연동
+    - [x] API Key 및 사용량 관리 UI 구현
