@@ -11,13 +11,10 @@ import {
   Cpu,
   Puzzle,
   ExternalLink,
-  ChevronLeft,
   Info,
   Terminal
 } from "lucide-react";
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { createClient } from "@/utils/supabase/client";
 
@@ -248,7 +245,7 @@ export default function AgentsPage() {
 
   const filteredAgents = agents.filter(a =>
     a.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    a.specialty.toLowerCase().includes(searchQuery.toLowerCase())
+    a.specialty?.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
   if (loading) {
@@ -404,10 +401,10 @@ export default function AgentsPage() {
               <section>
                 <h4 className="text-[14px] font-bold text-white mb-3">Categories</h4>
                 <div className="flex flex-wrap gap-2">
-                  {displayAgent?.tags.map(tag => (
+                  {displayAgent?.tags?.map(tag => (
                     <span key={tag} className="px-2 py-0.5 bg-[#2d2d2d] border border-[var(--vscode-border)] rounded text-[11px] text-[#858585]">{tag}</span>
                   ))}
-                  <span className="px-2 py-0.5 bg-[#2d2d2d] border border-[var(--vscode-border)] rounded text-[11px] text-[#858585]">{displayAgent?.specialty}</span>
+                  {displayAgent?.specialty && <span className="px-2 py-0.5 bg-[#2d2d2d] border border-[var(--vscode-border)] rounded text-[11px] text-[#858585]">{displayAgent.specialty}</span>}
                 </div>
               </section>
             </div>
