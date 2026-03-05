@@ -87,10 +87,10 @@ const ALL_AGENTS = [
 interface Agent {
   id: string;
   name: string;
-  role: string;
-  color: string;
-  system_prompt: string;
-  hourly_rate: number;
+  role?: string;
+  color?: string;
+  system_prompt?: string;
+  hourly_rate?: number;
   version?: string;
   author?: string;
   description?: string;
