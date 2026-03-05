@@ -175,7 +175,7 @@ ${messageContext}`;
         chat_id: chatId,
         sender_type: 'AGENT',
         sender_id: selectedAgent.id,
-        content: apiResponse.data.content,
+        content: apiResponse.data!.content,
       });
 
     if (agentMessageError) {
@@ -214,7 +214,7 @@ ${messageContext}`;
     const customReadable = new ReadableStream({
       async start(controller) {
         // 메시지 스트리밍 (실제로는 Claude API에서 스트리밍받기)
-        const text = apiResponse.data.content;
+        const text = apiResponse.data!.content;
         const words = text.split(' ');
 
         for (const word of words) {
